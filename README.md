@@ -1,41 +1,20 @@
-# 北村充ブランドサイト Ver.5
+# 北村充ブランドサイト Ver.5.1
 
-Next.js + 静的書き出し（Netlify向け）で作成した、北村充ブランドサイトです。
+Next.jsベースのブランドサイトです。
 
-## 目的
+## Ver.5.1 変更内容
+- Heroコピー「売るか迷っている。／それなら、まずは相談してください。」の改行を最適化
+- 「北村充が選ばれる5つの理由」の見出し崩れを修正
+- Hero写真の表示位置と余白を調整
+- CTAボタンの視認性を改善
+- PC／スマホ両方で読みやすいレスポンシブ調整
 
-- 大阪市の不動産売却相談の反響獲得
-- LINE公式、AI査定、電話、Instagram、TikTokへの導線統合
-- GitHubでバージョン管理しながら長期運用
-
-## 主要URL
-
-- LINE公式: https://lin.ee/SKauttW
-- Instagram: https://www.instagram.com/kitamura_baikyaku
-- TikTok: https://www.tiktok.com/@kitamura_baikyaku
-- AI査定: https://www.aisatei.com/?id=f34d098b-8769-26ad-926c-b0fa1ef28c9e
-
-## GitHubへ反映する方法
-
+## 更新手順
 1. このZIPを解凍
-2. 中身を `ドキュメント/GitHub/kitamura-brand-site` に上書きコピー
-3. GitHub Desktopを開く
-4. Summaryに `Ver5 Next.js版追加` と入力
-5. `Commit to main`
-6. `Push origin`
+2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
+3. GitHub Desktopで Summary に `Ver5.1 Hero改行・見出し修正` と入力
+4. Commit to main
+5. Push origin
 
-## Netlify設定
-
-Netlify側で自動的に以下が使われます。
-
-- Build command: `npm run build`
-- Publish directory: `out`
-
-`netlify.toml` に設定済みです。
-
-## 更新しやすいファイル
-
-- メインページ: `app/page.js`
-- デザイン: `app/globals.css`
-- 画像: `public/images/`
-- SNSロゴ: `public/icons/`
+## 公開
+NetlifyとGitHubを連携済みの場合、Push後に自動で公開されます。

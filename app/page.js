@@ -14,7 +14,11 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">大阪市の不動産売却専門｜無料相談・無料相場診断</p>
-            <h1>売るか迷っている。<span>それなら、まずは相談してください。</span></h1>
+            <h1 className="hero-title">
+              <span className="line-main">売るか迷っている。</span>
+              <span className="line-gold">それなら、</span>
+              <span className="line-gold">まずは相談してください。</span>
+            </h1>
             <p className="lead">今すぐ売る予定がなくても大丈夫です。相場を知り、売る・貸す・保有する選択肢を一緒に整理します。</p>
             <div className="cta-row">
               <a className="btn btn-ai" href={AI_URL} target="_blank">🤖 AIで無料査定する</a>
@@ -29,7 +33,7 @@ export default function Home() {
           </div>
           <div className="hero-photo">
             <img src="/images/hero-phone.jpg" alt="電話で売却相談に対応する北村充" />
-            <div className="hero-note">「売る」より、納得して任せるを大切に。</div>
+            <div className="hero-note">売却を決める前の相談も歓迎です。</div>
           </div>
         </div>
       </section>
@@ -59,7 +63,7 @@ export default function Home() {
         <div className="container split">
           <div className="image-panel"><img src="/images/profile.jpg" alt="北村充プロフィール写真" /></div>
           <div>
-            <div className="section-title" style={{textAlign:'left'}}><span className="eyebrow">REASON</span><h2>北村充が選ばれる5つの理由</h2></div>
+            <div className="section-title reason-title"><span className="eyebrow">REASON</span><h2><span>北村充が選ばれる</span><span>5つの理由</span></h2></div>
             <div className="reason-list">
               {['大阪市専門の地域密着サポート','しつこい営業をしない誠実な対応','相続・住み替え・空き家に強い','売る・貸す・保有まで比較して提案','契約から引き渡しまで丁寧にサポート'].map((t,i)=><div className="reason" key={t}><div className="num">0{i+1}</div><div><strong>{t}</strong><br/><small>売主様の状況に合わせて、無理のない判断を支援します。</small></div></div>)}
             </div>

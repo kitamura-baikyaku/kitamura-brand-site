@@ -1,11 +1,12 @@
-# Changelog
+# CHANGELOG
 
-## v5.0.0
+## Ver.5.1 - Hero改行・見出し修正
+- Heroコピーの改行を意図通りに制御
+- 「それなら、まずは相談してください。」の見え方を改善
+- 「北村充が選ばれる5つの理由」の見出し改行をレスポンシブ対応
+- Hero写真の表示位置と高さを調整
+- CTAボタンの最小幅・色味・視認性を改善
 
-- Next.js構成へ移行
-- Netlify静的書き出し対応
-- 北村充本人写真をヒーローに使用
-- Instagram / TikTok ロゴを提供画像に差し替え
-- LINE公式URL、AI査定URL、電話導線を統合
-- SEOメタデータを設定
-- GitHub運用向けREADMEを追加
+## Ver.5.0
+- Next.js版の初期実装
+- LINE、Instagram、TikTok、AI査定、電話導線を組み込み
