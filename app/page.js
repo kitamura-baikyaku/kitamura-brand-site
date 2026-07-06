@@ -7,10 +7,10 @@ const PHONE = '090-7555-6542';
 const areas = ['北区','都島区','城東区','鶴見区','旭区','福島区','西淀川区','淀川区','東淀川区','西区','港区','此花区','大正区','浪速区','中央区'];
 
 const problems = [
-  ['自分の家がいくらで売れるのか知りたい','まずは相場だけ知りたい段階でも大丈夫です。'],
-  ['相続した不動産をどうすればいいかわからない','売却・賃貸・保有を比較して整理します。'],
-  ['住み替えを検討しているがタイミングが不安','購入と売却の順番、資金計画まで確認します。'],
-  ['空き家の管理や売却に困っている','放置リスクや売却時期も含めてご案内します。']
+  [<>自分の家がいくらで<br className="mobileBreak" />売れるのか知りたい</>,'まずは相場だけ知りたい段階でも大丈夫です。'],
+  [<>相続した不動産を<br className="mobileBreak" />どうすればいいかわからない</>,'売却・賃貸・保有を比較して整理します。'],
+  [<>住み替えを検討しているが<br className="mobileBreak" />タイミングが不安</>,'購入と売却の順番、資金計画まで確認します。'],
+  [<>空き家の管理や売却に<br className="mobileBreak" />困っている</>,'放置リスクや売却時期も含めてご案内します。']
 ];
 
 const reasons = [
@@ -86,7 +86,7 @@ export default function Home() {
 
       <section className="section dark" id="problem">
         <div className="container">
-          <SectionTitle eyebrow="PROBLEM" title="こんなお悩みはありませんか？" dark />
+          <SectionTitle eyebrow="PROBLEM" title={<><span className="titleLine">こんなお悩みは</span><span className="titleLine">ありませんか？</span></>} dark />
           <div className="problemGrid">
             {problems.map(([title, text], i) => (
               <div className="problemCard" key={title}><div className="iconCircle">{['家','相','住','空'][i]}</div><h3>{title}</h3><p>{text}</p></div>
@@ -98,7 +98,7 @@ export default function Home() {
 
       <section className="section" id="reason">
         <div className="container">
-          <SectionTitle eyebrow="REASON" title="北村　充が選ばれる5つの理由" />
+          <SectionTitle eyebrow="REASON" title={<><span className="titleLine">北村　充が選ばれる</span><span className="titleLine">5つの理由</span></>} />
           <div className="reasonGrid">
             {reasons.map(([title, text], i) => (
               <article className="reasonCard" key={title}><div className="reasonNo">0{i + 1}</div><h3>{title}</h3><p>{text}</p></article>
@@ -130,7 +130,7 @@ export default function Home() {
 
       <section className="section aiSection" id="ai">
         <div className="container aiGrid">
-          <div className="aiBox"><p className="eyebrow">AI査定</p><h2>30秒でわかるAI相場診断</h2><p>まずは相場を知りたい方はAI査定をご利用ください。より正確な売却方針は、近隣事例や物件状態を確認して北村がご案内します。</p><div className="notice">AI査定フォームでは、お名前の後ろに <strong>（キタムラ）</strong> と入力してください。<br />例：山田太郎（キタムラ）</div><a className="btn btnAi" href={AI_URL} target="_blank" rel="noreferrer">AI査定をはじめる</a></div>
+          <div className="aiBox"><p className="eyebrow">AI査定</p><h2 className="aiHeading"><span>30秒でわかる</span><span>AI相場診断</span></h2><p>まずは相場を知りたい方はAI査定をご利用ください。より正確な売却方針は、近隣事例や物件状態を確認して北村がご案内します。</p><div className="notice">AI査定フォームでは、お名前の後ろに <strong>（キタムラ）</strong> と入力してください。<br />例：山田太郎（キタムラ）</div><a className="btn btnAi" href={AI_URL} target="_blank" rel="noreferrer">AI査定をはじめる</a></div>
           <div className="aiCompare"><h3>AI査定と北村の査定の違い</h3><p><strong>AI査定：</strong>まず相場の目安を知る。</p><p><strong>北村の査定：</strong>販売戦略、売却時期、住み替え、相続、税金面まで整理する。</p><a className="btn btnLine" href={LINE_URL} target="_blank" rel="noreferrer"><img src="/icons/line.png" alt="" />査定結果の見方を相談する</a></div>
         </div>
       </section>
