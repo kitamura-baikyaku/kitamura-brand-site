@@ -1,14 +1,15 @@
-# 北村　充ブランドサイト Ver.7.0.2
+# 北村充ブランドサイト Ver.7.1 Production
 
-大阪市の不動産売却相談サイトです。
-Ver.7.0.2では、公開サイトで確認されたPC・スマホの改行崩れと不要テキストを修正しています。
+大阪市の不動産売却相談を目的とした、GitHub / Netlify運用前提のブランドサイトです。
 
 ## 反映方法
-
-1. このZIPを解凍
-2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
-3. GitHub Desktopで変更を確認
-4. Summaryに `Ver7.0.2 改行崩れと不要文言修正`
+1. ZIPを解凍
+2. 解凍した中身を `kitamura-brand-site` フォルダへすべて上書きコピー
+3. GitHub Desktopを開く
+4. Summary に `Ver7.1 Production 文字組み最終調整` と入力
 5. Commit to main
 6. Push origin
-7. Netlifyの自動デプロイ完了後に公開サイトを確認
+7. Netlifyのデプロイ完了後、ブラウザで強制更新（Ctrl + F5）
+
+## 注意
+古いファイルが残ると意図しない表示になるため、上書きではなくフォルダ内の古いファイルを削除してからコピーする方法を推奨します。

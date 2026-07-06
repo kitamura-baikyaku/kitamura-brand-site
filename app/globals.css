@@ -223,3 +223,128 @@ img { display: block; max-width: 100%; }
   .aiBox,.aiCompare { padding: 28px 24px; border-radius: 26px; }
   .aiBox h2 { font-size: 30px; line-height: 1.34; }
 }
+
+/* ================================
+   Ver.7.1 Production refinements
+   Purpose: eliminate awkward Japanese line breaks and raise final layout quality.
+================================ */
+.heroGrid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 0.82fr);
+  gap: clamp(34px, 4vw, 68px);
+  align-items: center;
+}
+.heroCopy { max-width: 760px; }
+.heroTitle {
+  max-width: 760px;
+  font-size: clamp(50px, 5.4vw, 76px);
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+.heroTitle span { display: block; white-space: normal; }
+.heroGoldTop { margin-top: 8px; }
+.heroGoldMain { margin-top: 2px; }
+.heroPhoto {
+  height: clamp(500px, 52vw, 650px);
+  align-self: center;
+}
+.heroPhoto img {
+  object-fit: cover;
+  object-position: center 18%;
+}
+.lead { max-width: 720px; }
+
+/* PC AI card title: keep as one line on normal desktop */
+.aiGrid { grid-template-columns: minmax(0, 1.22fr) minmax(0, .78fr); }
+.aiTitle,
+.aiBox h2 {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  letter-spacing: -0.035em;
+}
+@media (min-width: 1100px) {
+  .aiTitle { white-space: nowrap; font-size: clamp(34px, 2.35vw, 42px) !important; }
+}
+
+/* Problem cards: no mid-word awkward wrapping */
+.problemGrid { grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 22px; }
+.problemCard { min-height: 285px; padding: 34px 28px; }
+.problemCard h3 {
+  min-height: 56px;
+  font-size: 19px;
+  line-height: 1.55;
+  letter-spacing: -0.015em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.problemCard h3 span { display: block; }
+.problemCard p { line-height: 1.9; }
+
+/* Reason cards: controlled title lines */
+.reasonGrid { grid-template-columns: repeat(5, minmax(190px, 1fr)); gap: 20px; }
+.reasonCard { min-height: 300px; padding: 28px 24px; }
+.reasonCard h3 {
+  min-height: 64px;
+  font-size: 18px;
+  line-height: 1.42;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.reasonCard h3 span { display: block; }
+.reasonCard p { line-height: 1.85; }
+
+/* Flow: align card heights */
+.flowCard { min-height: 245px; display: flex; flex-direction: column; }
+.flowCard h3 { min-height: 32px; }
+.flowCard p { line-height: 1.9; }
+
+/* Blog section: keep clean without explanatory production note */
+#blog .sectionTitle p { display: none !important; }
+
+@media (max-width: 1180px) {
+  .heroGrid { grid-template-columns: 1fr .82fr; }
+  .heroTitle { font-size: clamp(44px, 5.2vw, 64px); }
+  .reasonGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reasonCard { min-height: 250px; }
+}
+
+@media (max-width: 980px) {
+  .heroGrid { grid-template-columns: 1fr; }
+  .heroPhoto { order: -1; height: 430px; }
+  .aiGrid { grid-template-columns: 1fr; }
+  .aiTitle { white-space: normal; }
+  .problemGrid { grid-template-columns: 1fr; }
+  .problemCard { min-height: auto; }
+  .reasonGrid { grid-template-columns: 1fr; }
+  .reasonCard { min-height: auto; }
+}
+
+@media (max-width: 560px) {
+  .heroTitle {
+    font-size: clamp(36px, 11vw, 46px);
+    line-height: 1.16;
+    letter-spacing: -0.045em;
+  }
+  .heroPhoto { height: 340px; }
+  .problemCard {
+    min-height: 245px;
+    padding: 34px 28px;
+  }
+  .problemCard h3 {
+    min-height: 0;
+    font-size: 22px;
+    line-height: 1.52;
+  }
+  .sectionTitle h2 {
+    font-size: clamp(30px, 8vw, 36px);
+    line-height: 1.36;
+    letter-spacing: -0.035em;
+  }
+  #reason .sectionTitle h2 span { display: block; }
+  .reasonCard h3 {
+    min-height: 0;
+    font-size: 21px;
+    line-height: 1.5;
+  }
+  .flowCard { min-height: auto; }
+}

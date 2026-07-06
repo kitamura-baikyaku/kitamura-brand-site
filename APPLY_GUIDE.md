@@ -1,30 +1,30 @@
-# Ver.7.0.2 反映手順
+# Ver.7.1 反映手順
 
-## 1. ZIPを解凍
-`kitamura_brand_v7_0_2.zip` を右クリックして「すべて展開」します。
+## 推奨手順
 
-## 2. 中身をコピー
-解凍したフォルダの中身を、PC内のGitHub管理フォルダへ上書きコピーします。
+1. `kitamura_brand_v7_1.zip` をダウンロード
+2. ZIPを解凍
+3. PCの `ドキュメント > GitHub > kitamura-brand-site` を開く
+4. 中にある旧ファイルを削除
+   - `.git` フォルダが見える場合は絶対に削除しないでください
+   - 通常のエクスプローラー設定では `.git` は表示されません
+5. 解凍したVer.7.1の中身をすべてコピー
+6. GitHub Desktopを開く
+7. Summary に以下を入力
 
-例：
-`ドキュメント > GitHub > kitamura-brand-site`
+```text
+Ver7.1 Production 文字組み最終調整
+```
 
-## 3. GitHub DesktopでCommit
-GitHub Desktopを開くと変更ファイルが表示されます。
+8. `Commit to main`
+9. `Push origin`
+10. NetlifyのDeployが完了するまで待つ
+11. 公開サイトで `Ctrl + F5` を押して強制更新
 
-Summary：
-`Ver7.0.2 改行崩れと不要文言修正`
+## 修正確認ポイント
 
-その後、`Commit to main` を押します。
-
-## 4. Push origin
-Commit後、上部に表示される `Push origin` を押します。
-
-## 5. Netlify確認
-1〜2分後、公開URLで表示確認してください。
-
-確認ポイント：
-- PC版AI査定見出し
-- スマホ版「北村　充が選ばれる5つの理由」
-- スマホ版お悩みカード
-- BLOGセクションの不要文言が消えているか
+- ブログ欄の「公開後に記事を追加し、Instagram・TikTok・LINEの受け皿として育てます。」が消えている
+- PC版「30秒でわかるAI相場診断」が不自然に折り返していない
+- PC版「こんなお悩みはありませんか？」のカードタイトルが変な位置で割れていない
+- スマホ版「北村　充が選ばれる5つの理由」が自然な改行になっている
+- スマホ版のお悩みカードが読みやすい
