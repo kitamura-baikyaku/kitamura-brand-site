@@ -1,14 +1,15 @@
 import './globals.css';
 
 export const metadata = {
-  title: '大阪市の不動産売却相談｜北村　充｜無料相場診断・AI査定',
-  description: '大阪市で不動産売却・相続・住み替え・空き家にお悩みの方へ。北村　充が無料相場診断、30秒AI査定、LINE相談でサポートします。',
+  title: '大阪市の不動産売却なら北村　充｜無料相場診断・AI査定',
+  description: '大阪市の不動産売却・相続・住み替え・空き家の相談なら北村　充へ。売るか迷っている段階でも無料相談・無料相場診断・AI査定に対応しています。',
+  keywords: ['大阪市 不動産売却','大阪市 マンション売却','大阪市 相続 売却','空き家 売却 大阪市','北村充','株式会社ランド 阿波座店'],
   openGraph: {
     title: '北村　充｜大阪市の不動産売却相談',
-    description: '売るか迷っている段階でも大丈夫。無料相場診断・AI査定・LINE相談に対応。',
-    images: ['/images/hero-phone.jpg'],
+    description: '売るか迷っている。それなら、まずは相談してください。',
     type: 'website',
-    locale: 'ja_JP'
+    locale: 'ja_JP',
+    images: ['/images/hero-phone.jpg']
   }
 };
 
