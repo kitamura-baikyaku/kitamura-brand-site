@@ -1,14 +1,14 @@
-# 北村　充ブランドサイト Ver.7.0.1
+# 北村　充ブランドサイト Ver.7.0.2
 
-Ver.7.0 Releaseの表示調整版です。
-PC版AI査定見出し、スマホ版「選ばれる理由」、スマホ版「お悩みカード」の改行・文字組みを修正しています。
+大阪市の不動産売却相談サイトです。
+Ver.7.0.2では、公開サイトで確認されたPC・スマホの改行崩れと不要テキストを修正しています。
 
 ## 反映方法
-1. このZIPをダウンロード
-2. ZIPを解凍
-3. 中身を `Documents/GitHub/kitamura-brand-site` に上書きコピー
-4. GitHub Desktopを開く
-5. Summaryに `Ver7.0.1 文字組みとスマホ改行修正` と入力
-6. `Commit to main`
-7. `Push origin`
-8. Netlifyの自動デプロイ完了後、PC・スマホで表示確認
+
+1. このZIPを解凍
+2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
+3. GitHub Desktopで変更を確認
+4. Summaryに `Ver7.0.2 改行崩れと不要文言修正`
+5. Commit to main
+6. Push origin
+7. Netlifyの自動デプロイ完了後に公開サイトを確認
