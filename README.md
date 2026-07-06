@@ -1,20 +1,17 @@
-# 北村充ブランドサイト Ver.5.1
+# 北村　充ブランドサイト Ver.6
 
-Next.jsベースのブランドサイトです。
+大阪市の不動産売却相談に特化したブランドサイトです。
+Next.js + Netlifyで公開する前提の構成です。
 
-## Ver.5.1 変更内容
-- Heroコピー「売るか迷っている。／それなら、まずは相談してください。」の改行を最適化
-- 「北村充が選ばれる5つの理由」の見出し崩れを修正
-- Hero写真の表示位置と余白を調整
-- CTAボタンの視認性を改善
-- PC／スマホ両方で読みやすいレスポンシブ調整
-
-## 更新手順
-1. このZIPを解凍
+## 反映方法
+1. ZIPを解凍
 2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
-3. GitHub Desktopで Summary に `Ver5.1 Hero改行・見出し修正` と入力
+3. GitHub Desktopで `Ver6 制作会社品質へ再設計` と入力
 4. Commit to main
 5. Push origin
 
-## 公開
-NetlifyとGitHubを連携済みの場合、Push後に自動で公開されます。
+## 主な導線
+- LINE公式: https://lin.ee/SKauttW
+- AI査定: https://www.aisatei.com/?id=f34d098b-8769-26ad-926c-b0fa1ef28c9e
+- Instagram: https://www.instagram.com/kitamura_baikyaku
+- TikTok: https://www.tiktok.com/@kitamura_baikyaku

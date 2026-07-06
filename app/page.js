@@ -5,24 +5,33 @@ const TIKTOK_URL = 'https://www.tiktok.com/@kitamura_baikyaku';
 const PHONE = '090-7555-6542';
 
 const areas = ['北区','都島区','城東区','鶴見区','旭区','福島区','西淀川区','淀川区','東淀川区','西区','港区','此花区','大正区','浪速区','中央区'];
+const reasons = [
+  ['大阪市専門の地域密着サポート','近隣事例・買主動向・販売状況を踏まえ、現実的な売却方針をご提案します。'],
+  ['しつこい営業をしない誠実な対応','売ることを急がせず、売主様のペースで判断できるよう丁寧に整理します。'],
+  ['相続・住み替え・空き家に強い','価格だけでなく、ご家族・ローン・今後の暮らしまで一緒に考えます。'],
+  ['売る・貸す・保有まで比較して提案','売却が正解とは限りません。複数の選択肢を比較して判断を支えます。'],
+  ['契約から引き渡しまで丁寧にサポート','販売活動から条件交渉、契約、お引き渡しまで一貫して伴走します。']
+];
 
 export default function Home() {
   return (
     <main>
       <Header />
+
       <section className="hero" id="top">
+        <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">大阪市の不動産売却専門｜無料相談・無料相場診断</p>
-            <h1 className="hero-title hero-title-v52" aria-label="売るか迷っている。それなら、まずは相談してください。">
-              <span className="line-main hero-no-break">売るか迷っている。</span>
-              <span className="line-gold hero-no-break">それなら、まずは</span>
-              <span className="line-gold hero-no-break">相談してください。</span>
+            <h1 className="hero-title" aria-label="売るか迷っている。それなら、まずは相談してください。">
+              <span className="line-main">売るか迷っている。</span>
+              <span className="line-gold">それなら、まずは</span>
+              <span className="line-gold">相談してください。</span>
             </h1>
             <p className="lead">今すぐ売る予定がなくても大丈夫です。相場を知り、売る・貸す・保有する選択肢を一緒に整理します。</p>
             <div className="cta-row">
               <a className="btn btn-ai" href={AI_URL} target="_blank">🤖 AIで無料査定する</a>
-              <a className="btn btn-line" href={LINE_URL} target="_blank">LINEで気軽に相談する</a>
+              <a className="btn btn-line" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt=""/>LINEで相談する</a>
               <a className="btn btn-phone" href={`tel:${PHONE}`}>電話で相談する</a>
             </div>
             <div className="trust-row">
@@ -31,21 +40,19 @@ export default function Home() {
               <div className="trust"><small>営業方針</small><strong>無理な営業なし</strong></div>
             </div>
           </div>
-          <div className="hero-photo">
-            <img src="/images/hero-phone.jpg" alt="電話で売却相談に対応する北村充" />
-            <div className="hero-note">売却を決める前の相談も歓迎です。</div>
-          </div>
+          <figure className="hero-photo">
+            <img src="/images/hero-phone.jpg" alt="電話で売却相談に対応する北村　充" />
+            <figcaption>売却を決める前の相談も歓迎です。</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section className="section" id="sns">
-        <div className="container">
-          <div className="section-title"><span className="eyebrow">SNS / LINE</span><h2>日々の売却情報も発信中です</h2></div>
-          <div className="sns-grid">
-            <a className="sns-card" href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/><div><strong>Instagram</strong><br/><small>@kitamura_baikyaku</small></div></a>
-            <a className="sns-card" href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/><div><strong>TikTok</strong><br/><small>@kitamura_baikyaku</small></div></a>
-            <a className="sns-card" href={LINE_URL} target="_blank"><div className="card-icon">LINE</div><div><strong>LINE公式</strong><br/><small>無料相談・AI査定はこちら</small></div></a>
-          </div>
+      <section className="section social-section" id="sns">
+        <div className="container sns-grid">
+          <div className="sns-message">日々の売却情報や<br/>お役立ち情報を発信中</div>
+          <a className="sns-card" href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/><div><strong>Instagram</strong><br/><small>@kitamura_baikyaku</small></div></a>
+          <a className="sns-card" href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/><div><strong>TikTok</strong><br/><small>@kitamura_baikyaku</small></div></a>
+          <a className="sns-card" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt="LINE公式"/><div><strong>LINE公式</strong><br/><small>無料相談・AI査定はこちら</small></div></a>
         </div>
       </section>
 
@@ -55,46 +62,46 @@ export default function Home() {
           <div className="cards">
             {['自分の家がいくらで売れるのか知りたい','相続した不動産をどうすればいいかわからない','住み替えを検討しているがタイミングが不安','空き家の管理や売却に困っている'].map((t,i)=><div className="card" key={t}><div className="card-icon">{['🏠','💰','🚚','🔑'][i]}</div><h3>{t}</h3><p>売る前の段階から、現実的な選択肢を整理します。</p></div>)}
           </div>
-          <div className="cta-row" style={{justifyContent:'center',marginTop:32}}><a className="btn btn-line" href={LINE_URL} target="_blank">LINEで無料相談する</a></div>
+          <div className="center-cta"><a className="btn btn-line" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt=""/>LINEで無料相談する</a></div>
         </div>
       </section>
 
       <section className="section" id="reason">
-        <div className="container split">
-          <div className="image-panel"><img src="/images/profile.jpg" alt="北村充プロフィール写真" /></div>
+        <div className="container split reason-split">
+          <div className="image-panel"><img src="/images/profile.jpg" alt="北村　充プロフィール写真" /></div>
           <div>
-            <div className="section-title reason-title"><span className="eyebrow">REASON</span><h2 className="reason-heading"><span className="desktop-title">北村充が選ばれる5つの理由</span><span className="mobile-title">北村充が選ばれる<br/>5つの理由</span></h2></div>
+            <div className="section-title reason-title"><span className="eyebrow">REASON</span><h2 className="reason-heading">北村　充が選ばれる5つの理由</h2></div>
             <div className="reason-list">
-              {['大阪市専門の地域密着サポート','しつこい営業をしない誠実な対応','相続・住み替え・空き家に強い','売る・貸す・保有まで比較して提案','契約から引き渡しまで丁寧にサポート'].map((t,i)=><div className="reason" key={t}><div className="num">0{i+1}</div><div><strong>{t}</strong><br/><small>売主様の状況に合わせて、無理のない判断を支援します。</small></div></div>)}
+              {reasons.map(([title, body],i)=><div className="reason" key={title}><div className="num">0{i+1}</div><div><strong>{title}</strong><br/><small>{body}</small></div></div>)}
             </div>
           </div>
         </div>
       </section>
 
       <section className="section" id="ai">
-        <div className="container split">
+        <div className="container split ai-split">
           <div className="ai-box">
             <p className="eyebrow">AI査定</p><h2>30秒でわかるAI相場診断</h2>
             <p>まずは相場を知りたい方はAI査定をご利用ください。より正確な売却方針は、近隣事例や物件状態を確認して北村がご案内します。</p>
             <div className="ai-alert">AI査定フォームでは、お名前の後ろに <strong>（キタムラ）</strong> と入力してください。<br/>例：山田太郎（キタムラ）</div>
             <a className="btn btn-ai" href={AI_URL} target="_blank">AI査定をはじめる</a>
           </div>
-          <div className="card">
+          <div className="card comparison-card">
             <h3>AI査定と北村の査定の違い</h3>
             <p><strong>AI査定：</strong>まず相場の目安を知る。</p>
             <p><strong>北村の査定：</strong>販売戦略、売却時期、住み替え、相続、税金面まで整理する。</p>
-            <a className="btn btn-line" href={LINE_URL} target="_blank">査定結果の見方を相談する</a>
+            <a className="btn btn-line" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt=""/>査定結果の見方を相談する</a>
           </div>
         </div>
       </section>
 
       <section className="section dark" id="about">
-        <div className="container split">
+        <div className="container split about-split">
           <div>
-            <div className="section-title" style={{textAlign:'left'}}><span className="eyebrow">ABOUT</span><h2>はじめまして、北村充です。</h2></div>
+            <div className="section-title about-title"><span className="eyebrow">ABOUT</span><h2><span>はじめまして。</span><span>大阪市の不動産売却を担当しております</span><span>北村　充です。</span></h2></div>
             <p>私は大阪市で不動産売却のサポートをしています。前職では介護の現場で、ご本人やご家族の想いに向き合ってきました。不動産売却でも、価格だけではなく「これからの暮らし」まで考えた提案を大切にしています。</p>
             <p>売ることを急がせるのではなく、安心して任せていただける対応を心がけています。</p>
-            <a className="btn btn-line" href={LINE_URL} target="_blank">北村に相談する</a>
+            <a className="btn btn-line" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt=""/>北村に相談する</a>
           </div>
           <div className="image-panel"><img src="/images/store.jpg" alt="CENTURY21 株式会社ランド 阿波座店 外観" /></div>
         </div>
@@ -113,10 +120,10 @@ export default function Home() {
         </div></div>
       </section>
       <Footer />
-      <div className="fixed-cta"><a className="line" href={LINE_URL} target="_blank">LINE相談</a><a className="tel" href={`tel:${PHONE}`}>電話</a></div>
+      <div className="fixed-cta"><a className="line" href={LINE_URL} target="_blank"><img src="/icons/line.png" alt=""/>LINE相談</a><a className="ai" href={AI_URL} target="_blank">AI査定</a><a className="tel" href={`tel:${PHONE}`}>電話</a></div>
     </main>
   );
 }
 
-function Header(){return <header className="header"><div className="container nav"><a className="brand" href="#top"><div className="brand-mark">北</div><div><div className="brand-title">北村 充</div><div className="brand-sub">大阪市の不動産売却相談</div></div></a><nav className="nav-links"><a href="#problem">お悩み</a><a href="#reason">選ばれる理由</a><a href="#ai">AI査定</a><a href="#about">北村について</a><a href="#area">対応エリア</a><a href="#faq">FAQ</a></nav><div className="social"><a href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/></a><a href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/></a><a className="phone-pill" href={`tel:${PHONE}`}>{PHONE}</a></div></div></header>}
-function Footer(){return <footer className="footer"><div className="container footer-grid"><div><div className="brand-title">北村 充</div><p>大阪市の不動産売却相談</p></div><div><strong>お電話でのご相談</strong><h2>{PHONE}</h2><p>株式会社ランド 阿波座店<br/>大阪市西区立売堀5-4-1</p></div><div><strong>SNSリンク</strong><div className="social" style={{marginTop:12}}><a href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/></a><a href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/></a><a href={LINE_URL} target="_blank"><span className="tag">LINE</span></a></div></div></div><div className="container" style={{borderTop:'1px solid rgba(255,255,255,.12)',marginTop:30,paddingTop:16,fontSize:12}}>© 2026 北村充 不動産売却相談. All Rights Reserved.</div></footer>}
+function Header(){return <header className="header"><div className="container nav"><a className="brand" href="#top"><div className="brand-mark">北</div><div><div className="brand-title">北村　充</div><div className="brand-sub">大阪市の不動産売却相談</div></div></a><nav className="nav-links"><a href="#problem">お悩み</a><a href="#reason">選ばれる理由</a><a href="#ai">AI査定</a><a href="#about">北村について</a><a href="#area">対応エリア</a><a href="#faq">FAQ</a></nav><div className="social"><a href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/></a><a href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/></a><a href={LINE_URL} target="_blank"><img src="/icons/line.png" alt="LINE"/></a><a className="phone-pill" href={`tel:${PHONE}`}>{PHONE}</a></div></div></header>}
+function Footer(){return <footer className="footer"><div className="container footer-grid"><div><div className="brand-title">北村　充</div><p>大阪市の不動産売却相談</p></div><div><strong>お電話でのご相談</strong><h2>{PHONE}</h2><p>株式会社ランド 阿波座店<br/>大阪市西区立売堀5-4-1</p></div><div><strong>SNSリンク</strong><div className="social" style={{marginTop:12}}><a href={INSTAGRAM_URL} target="_blank"><img src="/icons/instagram.png" alt="Instagram"/></a><a href={TIKTOK_URL} target="_blank"><img src="/icons/tiktok.png" alt="TikTok"/></a><a href={LINE_URL} target="_blank"><img src="/icons/line.png" alt="LINE"/></a></div></div></div><div className="container copyright">© 2026 北村　充 不動産売却相談. All Rights Reserved.</div></footer>}
