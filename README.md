@@ -1,9 +1,16 @@
-# 北村ブランドサイト Ver.8.10 Rebase
+# 北村　充ブランドサイト Ver8.0 Stable
 
-Ver.7.2をベースに戻し、ブログ機能だけを安全に追加した安定版です。
+Ver7.2をベースに、既存レイアウトを壊さずブログ機能だけを追加した安定版です。
 
-## 方針
-- レイアウトは完成度が高かったVer.7.2を維持
-- ブログ一覧 `/blog` を追加
+## 追加内容
+- `/blog` ブログ一覧ページ
+- `/blog/osaka-shi-baikyaku-checklist`
+- `/blog/souzoku-ie-uru-kasu`
+- `/blog/ai-satei-mikata`
+- `data/blogs.js` による記事管理
 - トップページのブログカードを実記事リンク化
-- ヘッダーにブログリンクを追加
+- sitemap.xml更新
+
+## 反映
+GitHub Desktop Summary:
+`Ver8.0 Stable Ver7.2ベースでブログ追加`
