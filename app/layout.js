@@ -1,7 +1,6 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://boisterous-fairy-cede52.netlify.app'),
   title: '大阪市の不動産売却なら北村　充｜無料相場診断・AI査定',
   description: '大阪市の不動産売却・相続・住み替え・空き家の相談なら北村　充へ。売るか迷っている段階でも無料相談・無料相場診断・AI査定に対応しています。',
   keywords: ['大阪市 不動産売却','大阪市 マンション売却','大阪市 相続 売却','空き家 売却 大阪市','北村充','株式会社ランド 阿波座店'],
