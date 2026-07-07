@@ -1,16 +1,20 @@
-# 北村　充ブランドサイト Ver8.0 Stable
+# 北村　充ブランドサイト Ver.7.2
 
-Ver7.2をベースに、既存レイアウトを壊さずブログ機能だけを追加した安定版です。
+大阪市の不動産売却相談に特化した、北村　充ブランドサイトのProduction Master版です。
 
-## 追加内容
-- `/blog` ブログ一覧ページ
-- `/blog/osaka-shi-baikyaku-checklist`
-- `/blog/souzoku-ie-uru-kasu`
-- `/blog/ai-satei-mikata`
-- `data/blogs.js` による記事管理
-- トップページのブログカードを実記事リンク化
-- sitemap.xml更新
+## 反映方法
 
-## 反映
-GitHub Desktop Summary:
-`Ver8.0 Stable Ver7.2ベースでブログ追加`
+1. ZIPを解凍
+2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
+3. GitHub Desktopで変更内容を確認
+4. Summary に `Ver7.2 Production Master` と入力
+5. `Commit to main`
+6. `Push origin`
+7. Netlifyの自動反映を確認
+
+## 主な導線
+
+- LINE公式: https://lin.ee/SKauttW
+- AI査定: https://www.aisatei.com/?id=f34d098b-8769-26ad-926c-b0fa1ef28c9e
+- Instagram: https://www.instagram.com/kitamura_baikyaku
+- TikTok: https://www.tiktok.com/@kitamura_baikyaku
