@@ -1,20 +1,22 @@
-# 北村　充ブランドサイト Ver.7.2
+# 北村充ブランドサイト Ver.8.0 Blog System
 
-大阪市の不動産売却相談に特化した、北村　充ブランドサイトのProduction Master版です。
+大阪市の不動産売却相談サイトに、ブログ／売却ガイド機能を追加したバージョンです。
 
-## 反映方法
+## 追加内容
 
-1. ZIPを解凍
-2. 中身を `kitamura-brand-site` フォルダへ上書きコピー
-3. GitHub Desktopで変更内容を確認
-4. Summary に `Ver7.2 Production Master` と入力
-5. `Commit to main`
-6. `Push origin`
-7. Netlifyの自動反映を確認
+- `/blog` ブログ一覧ページ
+- `/blog/osaka-sell-checkpoints` 記事ページ
+- `/blog/ai-satei-vs-houmon-satei` 記事ページ
+- `/blog/inherited-house-sell-or-rent` 記事ページ
+- `data/blogs.js` 記事データ管理
+- トップページのブログセクションを実記事リンクへ変更
+- sitemap.xml 更新
 
-## 主な導線
+## 今後の記事追加方法
 
-- LINE公式: https://lin.ee/SKauttW
-- AI査定: https://www.aisatei.com/?id=f34d098b-8769-26ad-926c-b0fa1ef28c9e
-- Instagram: https://www.instagram.com/kitamura_baikyaku
-- TikTok: https://www.tiktok.com/@kitamura_baikyaku
+1. `data/blogs.js` に記事データを1件追加
+2. GitHub DesktopでCommit
+3. Push origin
+4. Netlifyで自動公開
+
+記事ページは `/app/blog/[slug]/page.js` が自動生成します。
