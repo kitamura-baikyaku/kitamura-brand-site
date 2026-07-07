@@ -1,9 +1,9 @@
 # CHANGELOG
 
 ## Ver8.0 Stable
-- Ver7.2をベースに再構築
+- Ver7.2を起点に再作成
 - ブログ一覧ページを追加
-- 初期記事3本を追加
-- トップページのブログカードを実リンク化
-- 横スクロール・カード崩れを防ぐCSSへ整理
-- sitemap.xmlを更新
+- 記事ページ3本を追加
+- トップページのブログ欄を実記事リンクへ変更
+- 既存のProblem / Reason / Flow / Hero のHTML構造・CSSを維持
+- sitemap.xml 更新

@@ -1,4 +1,5 @@
-import { blogs } from '../data/blogs';
+import Link from 'next/link';
+import { blogs as guideBlogs } from './data/blogs';
 const LINE_URL = 'https://lin.ee/SKauttW';
 const AI_URL = 'https://www.aisatei.com/?id=f34d098b-8769-26ad-926c-b0fa1ef28c9e';
 const INSTAGRAM_URL = 'https://www.instagram.com/kitamura_baikyaku';
@@ -35,7 +36,6 @@ const flow = [
   ['04', '売却活動', '広告・ネット掲載・購入希望者対応を行います。'],
   ['05', '契約・引渡し', '条件交渉から契約、引き渡しまで伴走します。']
 ];
-
 
 export default function Home() {
   return (
@@ -119,7 +119,7 @@ export default function Home() {
       </section>
       <section className="section" id="flow"><div className="container"><SectionTitle eyebrow="FLOW" title="売却までの流れ" /><div className="flowGrid">{flow.map(([no, title, text]) => <div className="flowCard" key={no}><span>{no}</span><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
       <section className="section" id="area"><div className="container"><SectionTitle eyebrow="AREA" title="対応エリア" text="大阪市全域に対応しています。特に下記エリアの売却相談を強化しています。" /><div className="areaTags">{areas.map(a => <span key={a}>{a}</span>)}</div></div></section>
-      <section className="section" id="blog"><div className="container"><SectionTitle eyebrow="BLOG / REPORT" title="売却レポート・お役立ちブログ" /><div className="blogGrid">{blogs.slice(0,3).map((blog) => <a className="blogCard" href={`/blog/${blog.slug}`} key={blog.slug}><small>{blog.category}</small><h3>{blog.title}</h3><p>{blog.description}</p><span>{blog.date}</span></a>)}</div><div className="center"><a className="btn btnPhone" href="/blog">ブログ一覧を見る</a></div></div></section>
+      <section className="section" id="blog"><div className="container"><SectionTitle eyebrow="BLOG / REPORT" title="売却レポート・お役立ちブログ" /><div className="blogGrid">{guideBlogs.slice(0,3).map((blog) => <article className="blogCard" key={blog.slug}><small>{blog.category}</small><h3>{blog.title}</h3><p>{blog.description}</p><Link href={`/blog/${blog.slug}`}>続きを読む</Link></article>)}</div><div className="center"><Link className="btn btnPhone" href="/blog">売却ガイドをもっと見る</Link></div></div></section>
       <section className="section" id="faq"><div className="container faqWrap"><SectionTitle eyebrow="FAQ" title="よくある質問" />{['まだ売るか決めていなくても相談できますか？|はい。相場だけ知りたい段階でも大丈夫です。','査定に費用はかかりますか？|無料です。AI査定、LINE相談、訪問査定のご相談も無料です。','しつこく営業されませんか？|無理な営業は行いません。ご希望に合わせてご案内します。','マンション以外も対応できますか？|戸建・土地・相続不動産・空き家もご相談可能です。'].map(row => { const [q,a] = row.split('|'); return <details key={q}><summary>{q}</summary><p>{a}</p></details> })}</div></section>
       <section className="finalCta" id="contact"><div className="container"><h2>まずは無料相場診断から。</h2><p>売るか迷っている段階でも、LINEからお気軽にご相談ください。</p><div className="ctaRow center"><a className="btn btnLine" href={LINE_URL} target="_blank" rel="noreferrer"><img src="/icons/line.png" alt="" />LINEで無料相談</a><a className="btn btnAi" href={AI_URL} target="_blank" rel="noreferrer">AI査定をはじめる</a><a className="btn btnPhone" href={`tel:${PHONE}`}>電話で相談</a></div></div></section>
       <Footer />
@@ -128,7 +128,7 @@ export default function Home() {
   );
 }
 
-function Header(){return <header className="header"><div className="container nav"><a className="brand" href="#top"><span className="brandMark">北</span><span><strong>北村　充</strong><small>大阪市の不動産売却相談</small></span></a><nav><a href="#problem">お悩み</a><a href="#reason">選ばれる理由</a><a href="#ai">AI査定</a><a href="/blog">ブログ</a><a href="#about">北村について</a><a href="#area">対応エリア</a><a href="#faq">FAQ</a></nav><div className="headActions"><a className="headSocial" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><img src="/icons/instagram.png" alt="Instagram" /></a><a className="headSocial" href={TIKTOK_URL} target="_blank" rel="noreferrer"><img src="/icons/tiktok.png" alt="TikTok" /></a><a className="headSocial" href={LINE_URL} target="_blank" rel="noreferrer"><img src="/icons/line.png" alt="LINE" /></a><a className="phonePill" href={`tel:${PHONE}`}>{PHONE}</a></div></div></header>}
+function Header(){return <header className="header"><div className="container nav"><a className="brand" href="#top"><span className="brandMark">北</span><span><strong>北村　充</strong><small>大阪市の不動産売却相談</small></span></a><nav><a href="#problem">お悩み</a><a href="#reason">選ばれる理由</a><a href="#ai">AI査定</a><a href="#about">北村について</a><a href="/blog">ブログ</a><a href="#area">対応エリア</a><a href="#faq">FAQ</a></nav><div className="headActions"><a className="headSocial" href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><img src="/icons/instagram.png" alt="Instagram" /></a><a className="headSocial" href={TIKTOK_URL} target="_blank" rel="noreferrer"><img src="/icons/tiktok.png" alt="TikTok" /></a><a className="headSocial" href={LINE_URL} target="_blank" rel="noreferrer"><img src="/icons/line.png" alt="LINE" /></a><a className="phonePill" href={`tel:${PHONE}`}>{PHONE}</a></div></div></header>}
 function SocialCard({url,icon,title,sub}){return <a className="snsCard" href={url} target="_blank" rel="noreferrer"><img src={icon} alt="" /><span><strong>{title}</strong><small>{sub}</small></span></a>}
 function SectionTitle({eyebrow,title,text,dark}){return <div className={`sectionTitle ${dark?'titleDark':''}`}><p className="eyebrow">{eyebrow}</p><h2>{title}</h2>{text&&<p className="sectionLead">{text}</p>}</div>}
 function Footer(){return <footer className="footer"><div className="container footerGrid"><div><h3>北村　充</h3><p>大阪市の不動産売却相談</p></div><div><h2>{PHONE}</h2><p>受付時間 9:00〜20:00</p></div><div><p>SNS</p><div className="footerSns"><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><img src="/icons/instagram.png" alt="Instagram" /></a><a href={TIKTOK_URL} target="_blank" rel="noreferrer"><img src="/icons/tiktok.png" alt="TikTok" /></a><a href={LINE_URL} target="_blank" rel="noreferrer"><img src="/icons/line.png" alt="LINE" /></a></div></div></div><div className="container copy">© 2026 北村　充 不動産売却相談サポート</div></footer>}
